@@ -7,7 +7,7 @@ General enterprise-relevant AI news for Tim Hoyt, hosted on GitHub Pages.
 
 In Apple Podcasts, open **Library > Follow a Show by URL** and paste the feed URL. The feed sets `itunes:block` to `yes`, so the show stays out of the Apple Podcasts directory and is available only by that URL.
 
-`cover.jpg` is a simple placeholder (square JPEG). Replace that file when the illustrated cover is ready. Keep it square, RGB, and between 1400×1400 and 3000×3000 pixels. The feed already points at `cover.jpg`.
+`cover.jpg` is the show artwork (square RGB JPEG, 1400×1400 or larger). The feed and site reference it as `cover.jpg?v=2`. If you replace the file, bump that query (for example `?v=3`) in `feed.xml` and `index.html` so Apple Podcasts loads the new image.
 
 ## Add a new episode
 

@@ -11,7 +11,7 @@
     <itunes:owner>
       <itunes:name>Tim Hoyt</itunes:name>
     </itunes:owner>
-    <itunes:image href="https://miamirunning.github.io/claude-news-podcast/cover.jpg"/>
+    <itunes:image href="https://miamirunning.github.io/claude-news-podcast/cover.jpg?v=2"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>yes</itunes:block>
@@ -26,7 +26,7 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>false</itunes:explicit>
       <itunes:duration>00:04:32</itunes:duration>
-      <itunes:image href="https://miamirunning.github.io/claude-news-podcast/cover.jpg"/>
+      <itunes:image href="https://miamirunning.github.io/claude-news-podcast/cover.jpg?v=2"/>
       <enclosure url="https://miamirunning.github.io/claude-news-podcast/episodes/ep01-claude-news.mp3" length="5446052" type="audio/mpeg"/>
       <guid isPermaLink="false">https://miamirunning.github.io/claude-news-podcast/episodes/ep01-claude-news</guid>
       <pubDate>Fri, 23 Oct 2026 17:00:00 GMT</pubDate>
