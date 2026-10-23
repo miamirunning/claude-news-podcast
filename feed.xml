@@ -16,7 +16,22 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>yes</itunes:block>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Fri, 23 Oct 2026 17:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 18:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Episode 2: OpenAI Goes Enterprise</title>
+      <description>Episode 2: OpenAI Goes Enterprise. OpenAI's models and Codex are coming to Google Cloud, where companies can pay from their existing cloud commitments. Its new Decisions API charges ten cents per million input tokens and nothing for output, and Uber is putting ChatGPT Work in front of more than 30,000 employees. We also trace the unconfirmed GPT-6.1 Terra rumor from a Microsoft code change, and look at what this week means for enterprise AI buyers.</description>
+      <itunes:title>Episode 2: OpenAI Goes Enterprise</itunes:title>
+      <itunes:author>Tim Hoyt</itunes:author>
+      <itunes:episode>2</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:05:00</itunes:duration>
+      <itunes:image href="https://miamirunning.github.io/claude-news-podcast/cover.jpg?v=2"/>
+      <enclosure url="https://miamirunning.github.io/claude-news-podcast/episodes/ep02-openai-enterprise.mp3" length="5996323" type="audio/mpeg"/>
+      <guid isPermaLink="false">https://miamirunning.github.io/claude-news-podcast/episodes/ep02-openai-enterprise</guid>
+      <pubDate>Fri, 23 Oct 2026 18:00:00 GMT</pubDate>
+      <link>https://miamirunning.github.io/claude-news-podcast/#ep02</link>
+    </item>
     <item>
       <title>Episode 1: Claude News Edition</title>
       <description>Andrew and Ava cover confirmed Claude news through October 23, 2026: Fable 5 and its return, Fable 5.1 and Mythos 5.1, Opus 5.5, Sonnet 5.5, and Haiku 5.5, plus the Claude Duet research preview, the Claude Security public beta, and Claude Platform on Google Cloud. Unconfirmed Fable 5.5 rumors stay labeled as rumors, including a Tuesday, October 27 date to watch.</description>
