@@ -1,0 +1,34 @@
+{
+  "episode": 5,
+  "title": "Episode 5: From Personal Skills to Enterprise Agents",
+  "pubDate": "Sun, 25 Oct 2026 16:45:53 GMT",
+  "duration_seconds": 538.070204,
+  "duration": "00:08:58",
+  "audio_file": "ep05-personal-skills-enterprise-agents.mp3",
+  "audio_url": "https://miamirunning.github.io/claude-news-podcast/episodes/ep05-personal-skills-enterprise-agents.mp3",
+  "enclosure_bytes": 10762071,
+  "sha256": "5c1b827b2f6890f73e61736118c77e3e0f8c46bd250c1e4beb4ce3ecab79808a",
+  "format": {
+    "codec": "MP3",
+    "sample_rate_hz": 44100,
+    "channels": 2,
+    "bitrate_kbps": 160
+  },
+  "ai_generated": true,
+  "fictional_case_study": true,
+  "spoken_words": 1441,
+  "spoken_turns": 36,
+  "voice_model": "ElevenLabs Eleven v4",
+  "voice_roles": {
+    "male": "Tim, authorized voice clone",
+    "female": "Nichalia Schwartz - Bright and Friendly"
+  },
+  "source_notes": "ep05-personal-skills-enterprise-agents-script.md",
+  "mastering": {
+    "integrated_lufs": -16.0,
+    "true_peak_dbtp": -1.95,
+    "lra_lu": 2.6,
+    "intro_outro_crossfades_seconds": 0.5,
+    "tempo_changed": false
+  }
+}
