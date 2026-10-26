@@ -1,96 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Enterprise AI News Studio</title>
-    <itunes:title>Enterprise AI News Studio</itunes:title>
+    <title>Enterprise AI in Practice</title>
+    <itunes:title>Enterprise AI in Practice</itunes:title>
     <link>https://miamirunning.github.io/claude-news-podcast/</link>
     <atom:link href="https://miamirunning.github.io/claude-news-podcast/feed.xml" rel="self" type="application/rss+xml"/>
     <language>en-us</language>
-    <description>General enterprise-relevant AI news for Tim Hoyt. Episodes cover model launches, product changes, and clearly labeled leaks and rumors from labs including Anthropic, OpenAI, Google, xAI, and Meta.</description>
+    <description>Practical conversations about AI workflows, skills, plugins, and enterprise agents.</description>
     <itunes:author>Tim Hoyt</itunes:author>
     <itunes:owner>
       <itunes:name>Tim Hoyt</itunes:name>
     </itunes:owner>
-    <itunes:image href="https://miamirunning.github.io/claude-news-podcast/cover.jpg?v=2"/>
+    <itunes:image href="https://miamirunning.github.io/claude-news-podcast/enterprise-ai-in-practice-cover-2026-10-26.png"/>
     <itunes:category text="Technology"/>
     <itunes:explicit>false</itunes:explicit>
     <itunes:block>yes</itunes:block>
     <itunes:type>episodic</itunes:type>
-    <lastBuildDate>Sun, 25 Oct 2026 16:45:53 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 00:38:49 GMT</lastBuildDate>
     <item>
-      <title>Episode 5: From Personal Skills to Enterprise Agents</title>
-      <description>Follow fictional operations colleague Elena from an inventory-report task to a tested skill, a shared plugin, marketplace review, and a managed enterprise agent. A story-driven look at testing, colleague pilots, security scanning, opt-in installation, scheduling, and responsible cloud deployment. AI-generated conversation about a proposed process.</description>
-      <itunes:title>Episode 5: From Personal Skills to Enterprise Agents</itunes:title>
+      <title>From Personal Skills to Enterprise Agents</title>
+      <description>Follow Elena from an inventory-report task to a tested personal skill, a plugin shared with colleagues, marketplace review, and a managed enterprise agent. A practical, fictional case study about testing, sharing, responsible adoption, and cloud deployment. AI-generated conversation with Tim and Nichalia.</description>
+      <itunes:title>From Personal Skills to Enterprise Agents</itunes:title>
       <itunes:author>Tim Hoyt</itunes:author>
-      <itunes:episode>5</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>false</itunes:explicit>
-      <itunes:duration>00:08:58</itunes:duration>
-      <itunes:image href="https://miamirunning.github.io/claude-news-podcast/cover.jpg?v=2"/>
-      <enclosure url="https://miamirunning.github.io/claude-news-podcast/episodes/ep05-personal-skills-enterprise-agents.mp3" length="10762071" type="audio/mpeg"/>
+      <itunes:duration>00:09:48</itunes:duration>
+      <itunes:image href="https://miamirunning.github.io/claude-news-podcast/enterprise-ai-in-practice-cover-2026-10-26.png"/>
+      <enclosure url="https://miamirunning.github.io/claude-news-podcast/episodes/personal-skills-enterprise-agents-2026-10-26.mp3" length="11760460" type="audio/mpeg"/>
       <guid isPermaLink="false">https://miamirunning.github.io/claude-news-podcast/episodes/ep05-personal-skills-enterprise-agents</guid>
-      <pubDate>Sun, 25 Oct 2026 16:45:53 GMT</pubDate>
-      <link>https://miamirunning.github.io/claude-news-podcast/#ep05</link>
-    </item>
-    <item>
-      <title>Episode 4: Building AI Training That People Actually Watch</title>
-      <description>How are AI enablement leaders making training videos, websites and slides with scripts, without a production team? We go through Riley Brown&apos;s one-prompt video edit with Claude Opus and Blender, and How I AI&apos;s look at Brooke Lacey, whose TikToks Claude Code edits in about fifteen seconds. Plus this month&apos;s toolkit (HeyGen, Synthesia, turning Google Slides into Google Vids, Gamma 5, Descript, Kling 4.0, Grok Imagine), a five-step plan to start tomorrow, and ideas for Grok Bot.</description>
-      <itunes:title>Episode 4: Building AI Training That People Actually Watch</itunes:title>
-      <itunes:author>Tim Hoyt</itunes:author>
-      <itunes:episode>4</itunes:episode>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:duration>00:05:57</itunes:duration>
-      <itunes:image href="https://miamirunning.github.io/claude-news-podcast/cover.jpg?v=2"/>
-      <enclosure url="https://miamirunning.github.io/claude-news-podcast/episodes/ep04-ai-training.mp3" length="7134764" type="audio/mpeg"/>
-      <guid isPermaLink="false">https://miamirunning.github.io/claude-news-podcast/episodes/ep04-ai-training</guid>
-      <pubDate>Fri, 23 Oct 2026 19:12:00 GMT</pubDate>
-      <link>https://miamirunning.github.io/claude-news-podcast/#ep04</link>
-    </item>
-    <item>
-      <title>Episode 3: The xAI Edition</title>
-      <description>Episode 3 is all about xAI, now SpaceX Super Intelligence. Grok Voice 3.0 tops a speech leaderboard, Cursor joins The X Subscription and can now control your computer, Grok Build gains memory, and Grok Bot learns to build live dashboards and passes 800,000 paid weekly users. Then, clearly labeled as ideas, we share ways to use Grok Bot, including a briefing built from the AI voices you follow on X.</description>
-      <itunes:title>Episode 3: The xAI Edition</itunes:title>
-      <itunes:author>Tim Hoyt</itunes:author>
-      <itunes:episode>3</itunes:episode>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:duration>00:04:47</itunes:duration>
-      <itunes:image href="https://miamirunning.github.io/claude-news-podcast/cover.jpg?v=2"/>
-      <enclosure url="https://miamirunning.github.io/claude-news-podcast/episodes/ep03-xai.mp3" length="5749720" type="audio/mpeg"/>
-      <guid isPermaLink="false">https://miamirunning.github.io/claude-news-podcast/episodes/ep03-xai</guid>
-      <pubDate>Fri, 23 Oct 2026 18:52:00 GMT</pubDate>
-      <link>https://miamirunning.github.io/claude-news-podcast/#ep03</link>
-    </item>
-    <item>
-      <title>Episode 2: OpenAI Goes Enterprise</title>
-      <description>Episode 2: OpenAI Goes Enterprise. OpenAI's models and Codex are coming to Google Cloud, where companies can pay from their existing cloud commitments. Its new Decisions API charges ten cents per million input tokens and nothing for output, and Uber is putting ChatGPT Work in front of more than 30,000 employees. We also trace the unconfirmed GPT-6.1 Terra rumor from a Microsoft code change, and look at what this week means for enterprise AI buyers.</description>
-      <itunes:title>Episode 2: OpenAI Goes Enterprise</itunes:title>
-      <itunes:author>Tim Hoyt</itunes:author>
-      <itunes:episode>2</itunes:episode>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:duration>00:05:00</itunes:duration>
-      <itunes:image href="https://miamirunning.github.io/claude-news-podcast/cover.jpg?v=2"/>
-      <enclosure url="https://miamirunning.github.io/claude-news-podcast/episodes/ep02-openai-enterprise.mp3" length="5996323" type="audio/mpeg"/>
-      <guid isPermaLink="false">https://miamirunning.github.io/claude-news-podcast/episodes/ep02-openai-enterprise</guid>
-      <pubDate>Fri, 23 Oct 2026 18:00:00 GMT</pubDate>
-      <link>https://miamirunning.github.io/claude-news-podcast/#ep02</link>
-    </item>
-    <item>
-      <title>Episode 1: Claude News Edition</title>
-      <description>Andrew and Ava cover confirmed Claude news through October 23, 2026: Fable 5 and its return, Fable 5.1 and Mythos 5.1, Opus 5.5, Sonnet 5.5, and Haiku 5.5, plus the Claude Duet research preview, the Claude Security public beta, and Claude Platform on Google Cloud. Unconfirmed Fable 5.5 rumors stay labeled as rumors, including a Tuesday, October 27 date to watch.</description>
-      <itunes:title>Episode 1: Claude News Edition</itunes:title>
-      <itunes:author>Tim Hoyt</itunes:author>
-      <itunes:episode>1</itunes:episode>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:duration>00:04:32</itunes:duration>
-      <itunes:image href="https://miamirunning.github.io/claude-news-podcast/cover.jpg?v=2"/>
-      <enclosure url="https://miamirunning.github.io/claude-news-podcast/episodes/ep01-claude-news.mp3" length="5446052" type="audio/mpeg"/>
-      <guid isPermaLink="false">https://miamirunning.github.io/claude-news-podcast/episodes/ep01-claude-news</guid>
-      <pubDate>Fri, 23 Oct 2026 17:00:00 GMT</pubDate>
-      <link>https://miamirunning.github.io/claude-news-podcast/#ep01</link>
+      <pubDate>Mon, 26 Oct 2026 00:38:49 GMT</pubDate>
+      <link>https://miamirunning.github.io/claude-news-podcast/#personal-skills-enterprise-agents</link>
     </item>
   </channel>
 </rss>
