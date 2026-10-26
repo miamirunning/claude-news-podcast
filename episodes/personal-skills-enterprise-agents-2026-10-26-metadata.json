@@ -1,0 +1,37 @@
+{
+  "show_title": "Enterprise AI in Practice",
+  "title": "From Personal Skills to Enterprise Agents",
+  "pubDate": "Mon, 26 Oct 2026 00:38:49 GMT",
+  "guid": "https://miamirunning.github.io/claude-news-podcast/episodes/ep05-personal-skills-enterprise-agents",
+  "duration_seconds": 587.990204,
+  "duration": "00:09:48",
+  "audio_file": "personal-skills-enterprise-agents-2026-10-26.mp3",
+  "audio_url": "https://miamirunning.github.io/claude-news-podcast/episodes/personal-skills-enterprise-agents-2026-10-26.mp3",
+  "enclosure_bytes": 11760460,
+  "sha256": "c3285252aff365f1ce17641c53b8ad88cf0c9a098b88fbebd8da65e121e97aca",
+  "cover_url": "https://miamirunning.github.io/claude-news-podcast/enterprise-ai-in-practice-cover-2026-10-26.png",
+  "format": {
+    "codec": "MP3",
+    "sample_rate_hz": 44100,
+    "channels": 2,
+    "bitrate_kbps": 160
+  },
+  "ai_generated": true,
+  "fictional_case_study": true,
+  "spoken_words": 1625,
+  "spoken_turns": 40,
+  "voice_model": "ElevenLabs Eleven v4",
+  "voice_roles": {
+    "male": "Tim, authorized voice clone",
+    "female": "Nichalia Schwartz - Bright and Friendly"
+  },
+  "source_notes": "personal-skills-enterprise-agents-2026-10-26-script.md",
+  "mastering": {
+    "integrated_lufs": -16.0,
+    "true_peak_dbtp": -1.83,
+    "lra_lu": 2.5,
+    "intro_seconds": 4.445,
+    "outro_seconds": 7.895,
+    "tempo_changed": false
+  }
+}
