@@ -1,31 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Enterprise AI in Practice</title>
-  <link rel="alternate" type="application/rss+xml" title="Enterprise AI in Practice" href="enterprise-ai-in-practice.xml">
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.5; color: #161616; }
-    img { width: 12rem; height: 12rem; display: block; }
-    audio { width: 100%; margin: 1rem 0; }
-    code { word-break: break-all; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enterprise AI in Practice</title>
+<link rel="alternate" type="application/rss+xml" title="Enterprise AI in Practice" href="enterprise-ai-in-practice.xml">
+<style>
+:root { color-scheme:light; --ink:#24113f; --purple:#4816ae; --muted:#655b70; --line:#e6dfef; --paper:#f9f7fc; }
+* { box-sizing:border-box; }
+body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.55; color:var(--ink); background:var(--paper); }
+a { color:var(--purple); text-underline-offset:.2em; }
+a:hover { text-decoration-thickness:2px; }
+button { font:inherit; }
+button,a { -webkit-tap-highlight-color:transparent; }
+:focus-visible { outline:3px solid #007f99; outline-offset:4px; }
+.shell { width:min(100% - 3rem,76rem); margin:auto; }
+.show-header { display:flex; align-items:center; gap:1.25rem; padding:2rem 0; border-bottom:1px solid var(--line); }
+.show-cover { width:5.75rem; height:5.75rem; border-radius:1rem; flex:none; }
+h1 { font-size:clamp(1.35rem,2.8vw,1.85rem); line-height:1.18; margin:0 0 .35rem; letter-spacing:-.025em; }
+.show-header p { margin:0; color:var(--muted); max-width:40rem; font-size:.96rem; }
+.episode-heading { max-width:56rem; padding:2.5rem 0 1.25rem; }
+.episode-heading h2 { margin:0 0 .8rem; font-size:clamp(1.9rem,4vw,2.8rem); line-height:1.15; letter-spacing:-.035em; }
+.episode-meta { color:var(--muted); font-size:.92rem; margin:0 0 .9rem; }
+.episode-heading p:last-child { margin:0; font-size:1.05rem; }
+.episode-layout { display:grid; grid-template-columns:minmax(19rem,.82fr) minmax(0,1.5fr); grid-template-areas:"listen graphic" "chapters graphic"; grid-template-rows:auto 1fr; column-gap:2rem; row-gap:1.25rem; align-items:start; padding:1rem 0 2.5rem; }
+.listen { grid-area:listen; background:#fff; border:1px solid var(--line); border-radius:1rem; padding:1.25rem; }
+h3 { margin:0 0 .5rem; font-size:1.15rem; letter-spacing:-.015em; }
+.listen p { color:var(--muted); margin:.4rem 0 0; font-size:.87rem; }
+audio { width:100%; display:block; margin:.7rem 0; }
+.download { font-size:.87rem; }
+.chapter-nav { grid-area:chapters; }
+.chapter-nav > p { color:var(--muted); font-size:.9rem; margin:.25rem 0 .8rem; }
+.chapter-list { padding:0; margin:0; list-style:none; display:grid; gap:.55rem; }
+.chapter-button { width:100%; display:grid; grid-template-columns:3.05rem 1fr; gap:.6rem; align-items:start; text-align:left; padding:.85rem 1rem; background:#fff; border:1px solid var(--line); border-radius:.75rem; color:var(--ink); cursor:pointer; min-height:3.3rem; }
+.chapter-button time { font-variant-numeric:tabular-nums; color:var(--purple); font-weight:650; }
+.chapter-button > span:nth-child(2) { line-height:1.4; overflow-wrap:break-word; }
+.chapter-button:hover { border-color:#a88bdc; background:#fcfaff; }
+.chapter-button[aria-current="true"] { border-color:var(--purple); background:#f0e9fc; box-shadow:inset 3px 0 0 var(--purple); }
+.current-tag { display:none; grid-column:2; color:var(--purple); font-size:.72rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+.chapter-button[aria-current="true"] .current-tag { display:block; }
+#chapter-status { min-height:1.5em; color:var(--muted); font-size:.83rem; margin:.8rem .1rem 0; }
+.companion { grid-area:graphic; margin:0; min-width:0; background:white; padding:1.15rem; border:1px solid var(--line); border-radius:1.15rem; }
+.companion-head { display:flex; justify-content:space-between; gap:1rem; align-items:baseline; margin-bottom:.85rem; }
+.companion-head h3 { margin:0; }
+.enlarge-hint { font-size:.85rem; color:var(--purple); white-space:nowrap; }
+.graphic-preview { display:block; border-radius:.4rem; }
+.graphic-preview img { width:100%; height:auto; display:block; border-radius:.4rem; }
+figcaption { color:var(--muted); font-size:.85rem; margin-top:.8rem; }
+.subscribe { padding:1.5rem 0 2.5rem; border-top:1px solid var(--line); }
+.subscribe p { margin:.7rem 0; color:var(--muted); font-size:.92rem; }
+.feed-link { display:inline-block; padding:.7rem 1.1rem; border-radius:.6rem; background:var(--purple); color:white; font-weight:650; text-decoration:none; }
+.feed-url { overflow-wrap:anywhere; }
+.image-dialog { padding:0; border:1px solid var(--line); border-radius:.8rem; width:min(96vw,1450px); max-width:none; max-height:94dvh; background:white; color:var(--ink); }
+.image-dialog::backdrop { background:rgb(24 12 39 / .75); }
+.dialog-head { display:flex; gap:1rem; justify-content:space-between; align-items:center; padding:.8rem 1rem; border-bottom:1px solid var(--line); }
+.dialog-head h2 { font-size:1.05rem; line-height:1.3; margin:0; }
+.dialog-close { flex:none; padding:.55rem .8rem; border:1px solid var(--line); border-radius:.5rem; background:white; color:var(--ink); cursor:pointer; min-height:44px; }
+.dialog-note { margin:0; padding:.6rem 1rem; font-size:.9rem; color:var(--muted); }
+.full-image-scroll { overflow:auto; max-height:calc(94dvh - 9rem); padding:1rem; }
+.full-image-scroll img { display:block; width:1360px; height:1156px; max-width:none; }
+@media(max-width:900px) {
+ .shell { width:min(100% - 2rem,44rem); }
+ .episode-layout { grid-template-columns:minmax(0,1fr); grid-template-areas:"listen" "graphic" "chapters"; gap:1.5rem; }
+ .episode-heading { padding-top:1.8rem; }
+ .companion { padding:.8rem; }
+ .show-header { padding:1.25rem 0; gap:1rem; }
+ .show-cover { width:4.5rem; height:4.5rem; border-radius:.7rem; }
+ .show-header p { font-size:.87rem; }
+}
+@media(max-width:380px) { .show-header { align-items:flex-start; } .show-cover { width:3.75rem; height:3.75rem; } .companion-head { display:block; } .enlarge-hint { display:block; margin-top:.25rem; } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; } }
+</style>
 </head>
 <body>
-  <img src="enterprise-ai-in-practice-cover-2026-10-26.png" alt="Enterprise AI in Practice">
-  <h1>Enterprise AI in Practice</h1>
-  <p>Practical conversations about AI workflows, skills, plugins, and enterprise agents.</p>
-
-  <span id="ep05" aria-hidden="true"></span>
-  <h2 id="personal-skills-enterprise-agents">From Personal Skills to Enterprise Agents</h2>
-  <p><time datetime="2026-10-26">October 26, 2026</time> · 9:48</p>
-  <p>Follow Elena from an inventory-report task to a tested personal skill, a plugin shared with colleagues, marketplace review, and a managed enterprise agent. A practical, fictional case study about testing, sharing, responsible adoption, and cloud deployment. AI-generated conversation with Tim and Nichalia.</p>
-  <audio controls preload="metadata" src="episodes/personal-skills-enterprise-agents-2026-10-26.mp3">
-    <a href="episodes/personal-skills-enterprise-agents-2026-10-26.mp3">Download audio</a>
-  </audio>
-
-  <p>Podcast feed: <a href="https://miamirunning.github.io/claude-news-podcast/enterprise-ai-in-practice.xml"><code>https://miamirunning.github.io/claude-news-podcast/enterprise-ai-in-practice.xml</code></a></p>
-  <p>In Apple Podcasts, open Library, choose Follow a Show by URL, and paste that feed address.</p>
+<div class="shell">
+<header class="show-header">
+<img class="show-cover" src="enterprise-ai-in-practice-cover-2026-10-26.png" width="92" height="92" alt="Enterprise AI in Practice cover">
+<div><h1>Enterprise AI in Practice</h1><p>Practical conversations about AI workflows, skills, plugins, and enterprise agents.</p></div>
+</header>
+<main>
+<article aria-labelledby="personal-skills-enterprise-agents">
+<span id="ep05" aria-hidden="true"></span>
+<div class="episode-heading">
+<h2 id="personal-skills-enterprise-agents">From Personal Skills to Enterprise Agents</h2>
+<p class="episode-meta"><time datetime="2026-10-26">October 26, 2026</time> · 9:48</p>
+<p>Follow Elena from an inventory-report task to a tested personal skill, a plugin shared with colleagues, marketplace review, and a managed enterprise agent. A practical, fictional case study about testing, sharing, responsible adoption, and cloud deployment. AI-generated conversation with Tim and Nichalia.</p>
+</div>
+<div class="episode-layout">
+<section class="listen" aria-labelledby="listen-heading">
+<h3 id="listen-heading">Listen to the episode</h3>
+<audio id="episode-audio" controls preload="metadata" src="episodes/personal-skills-enterprise-agents-2026-10-26.mp3"><a href="episodes/personal-skills-enterprise-agents-2026-10-26.mp3">Download audio</a></audio>
+<a class="download" href="episodes/personal-skills-enterprise-agents-2026-10-26.mp3">Download audio</a>
+</section>
+<nav class="chapter-nav" aria-labelledby="chapter-heading">
+<h3 id="chapter-heading">Five chapters</h3><p>Choose a chapter to move the player. Press play when you’re ready.</p>
+<ol class="chapter-list"><li><button type="button" class="chapter-button" data-start="0" aria-controls="episode-audio"><time datetime="PT0S">0:00</time><span>Elena creates a skill for herself</span><span class="current-tag" aria-hidden="true">Current</span></button></li>
+<li><button type="button" class="chapter-button" data-start="216.735" aria-controls="episode-audio"><time datetime="PT216.735S">3:37</time><span>She shares to colleagues as a plugin</span><span class="current-tag" aria-hidden="true">Current</span></button></li>
+<li><button type="button" class="chapter-button" data-start="361.885" aria-controls="episode-audio"><time datetime="PT361.885S">6:02</time><span>She submits to enterprise marketplace</span><span class="current-tag" aria-hidden="true">Current</span></button></li>
+<li><button type="button" class="chapter-button" data-start="446.275" aria-controls="episode-audio"><time datetime="PT446.275S">7:26</time><span>Colleagues add plugins from marketplace</span><span class="current-tag" aria-hidden="true">Current</span></button></li>
+<li><button type="button" class="chapter-button" data-start="504.475" aria-controls="episode-audio"><time datetime="PT504.475S">8:24</time><span>Deploy a cloud-hosted agent</span><span class="current-tag" aria-hidden="true">Current</span></button></li></ol>
+<p id="chapter-status" role="status" aria-live="polite" aria-atomic="true"></p>
+<noscript><p>Chapter controls need JavaScript. The timestamps above still show where each stage begins.</p></noscript>
+</nav>
+<figure class="companion">
+<div class="companion-head"><h3>The five-stage journey</h3><span class="enlarge-hint">Select to enlarge ↗</span></div>
+<a class="graphic-preview" id="open-graphic" href="personal-skills-enterprise-agents-infographic-v3.png" target="_blank" rel="noopener" aria-label="Enlarge the five-stage infographic"><img src="personal-skills-enterprise-agents-infographic-v3.png" width="1360" height="1156" alt="Five rising steps: Elena creates a skill for herself; She shares to colleagues as a plugin; submits to enterprise marketplace for admin review; colleagues add plugins from marketplace; deploy a cloud-hosted agent. Elena appears in the first three steps, followed by a colleague and the shared team."></a>
+<figcaption>Follow the same five stages as you listen. Open the full-resolution graphic to read every detail.</figcaption>
+</figure>
+</div>
+</article>
+</main>
+<footer class="subscribe"><a class="feed-link" href="https://miamirunning.github.io/claude-news-podcast/enterprise-ai-in-practice.xml">Follow the podcast</a><p>Podcast feed: <a class="feed-url" href="https://miamirunning.github.io/claude-news-podcast/enterprise-ai-in-practice.xml">https://miamirunning.github.io/claude-news-podcast/enterprise-ai-in-practice.xml</a></p><p>In Apple Podcasts, open Library, choose Follow a Show by URL, and paste that feed address.</p></footer>
+</div>
+<dialog class="image-dialog" id="graphic-dialog" aria-labelledby="graphic-dialog-title">
+<div class="dialog-head"><h2 id="graphic-dialog-title">From Personal Skills to Enterprise Agents</h2><button class="dialog-close" type="button" id="close-graphic" autofocus>Close graphic ✕</button></div>
+<p class="dialog-note">Full resolution. Scroll to explore all five stages. <a href="personal-skills-enterprise-agents-infographic-v3.png" target="_blank" rel="noopener">Open image on its own (new tab)</a>.</p>
+<div class="full-image-scroll" tabindex="0" role="region" aria-label="Scrollable full-resolution infographic"><img src="personal-skills-enterprise-agents-infographic-v3.png" width="1360" height="1156" alt="The full-resolution five-stage journey from personal skill to enterprise agent. Chapter labels on the page provide a text version of the five headlines."></div>
+</dialog>
+<script>
+(() => {
+ const audio=document.getElementById('episode-audio');
+ const buttons=Array.from(document.querySelectorAll('.chapter-button'));
+ const status=document.getElementById('chapter-status');
+ let pendingSeek=null,active=-1;
+ function markChapter(time,selected=false) {
+  let next=0;buttons.forEach((button,i)=>{if(time>=Number(button.dataset.start)) next=i;});
+  if(next===active&&!selected)return;
+  active=next;
+  buttons.forEach((button,i)=>{if(i===next)button.setAttribute('aria-current','true');else button.removeAttribute('aria-current');});
+  const label=buttons[next].querySelector('span').textContent;
+  status.textContent=(selected?'Selected: ':'Chapter: ')+label;
+ }
+ function seek(seconds) {
+  if(audio.readyState>=1&&Number.isFinite(audio.duration)) {
+   audio.currentTime=Math.min(seconds,Math.max(0,audio.duration-.01));pendingSeek=null;markChapter(seconds,true);
+  } else {pendingSeek=seconds;markChapter(seconds,true);audio.load();}
+ }
+ buttons.forEach(button=>button.addEventListener('click',()=>seek(Number(button.dataset.start))));
+ audio.addEventListener('loadedmetadata',()=>{if(pendingSeek!==null)seek(pendingSeek);else markChapter(audio.currentTime);});
+ ['timeupdate','seeked','ended'].forEach(type=>audio.addEventListener(type,()=>{if(pendingSeek===null)markChapter(audio.currentTime);}));
+ markChapter(0);
+ const opener=document.getElementById('open-graphic'),dialog=document.getElementById('graphic-dialog');
+ if(typeof dialog.showModal==='function') {
+  opener.addEventListener('click',event=>{if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();dialog.showModal();});
+  document.getElementById('close-graphic').addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('close',()=>opener.focus());
+ }
+})();
+</script>
 </body>
 </html>
