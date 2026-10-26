@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:podcast="https://podcastindex.org/namespace/1.0">
+  <channel>
+    <title>Enterprise AI in Practice</title>
+    <itunes:title>Enterprise AI in Practice</itunes:title>
+    <link>https://miamirunning.github.io/claude-news-podcast/</link>
+    <atom:link href="https://miamirunning.github.io/claude-news-podcast/enterprise-ai-in-practice.xml" rel="self" type="application/rss+xml"/>
+    <podcast:guid>509ca08d-3ef8-59fb-89c1-43e8888e6e16</podcast:guid>
+    <language>en-us</language>
+    <description>Practical conversations about AI workflows, skills, plugins, and enterprise agents.</description>
+    <itunes:author>Tim Hoyt</itunes:author>
+    <itunes:owner>
+      <itunes:name>Tim Hoyt</itunes:name>
+    </itunes:owner>
+    <itunes:image href="https://miamirunning.github.io/claude-news-podcast/enterprise-ai-in-practice-cover-2026-10-26.png"/>
+    <itunes:category text="Technology"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:block>yes</itunes:block>
+    <itunes:type>episodic</itunes:type>
+    <lastBuildDate>Mon, 26 Oct 2026 01:00:39 GMT</lastBuildDate>
+    <item>
+      <title>From Personal Skills to Enterprise Agents</title>
+      <description>Follow Elena from an inventory-report task to a tested personal skill, a plugin shared with colleagues, marketplace review, and a managed enterprise agent. A practical, fictional case study about testing, sharing, responsible adoption, and cloud deployment. AI-generated conversation with Tim and Nichalia.</description>
+      <itunes:title>From Personal Skills to Enterprise Agents</itunes:title>
+      <itunes:author>Tim Hoyt</itunes:author>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:duration>00:09:48</itunes:duration>
+      <itunes:image href="https://miamirunning.github.io/claude-news-podcast/enterprise-ai-in-practice-cover-2026-10-26.png"/>
+      <enclosure url="https://miamirunning.github.io/claude-news-podcast/episodes/personal-skills-enterprise-agents-2026-10-26.mp3" length="11760460" type="audio/mpeg"/>
+      <guid isPermaLink="false">urn:uuid:0681c233-6ead-51eb-bb4c-8972765c7ea5</guid>
+      <pubDate>Mon, 26 Oct 2026 00:38:49 GMT</pubDate>
+      <link>https://miamirunning.github.io/claude-news-podcast/#personal-skills-enterprise-agents</link>
+    </item>
+  </channel>
+</rss>
